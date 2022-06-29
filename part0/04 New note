@@ -1,0 +1,27 @@
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note [{note: "nota"}]
+note over server:
+Server recieves the new note and add it to the page.
+end note
+
+server->browser: Redirect to /exampleapp/notes
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server->browser: HTML code 
+note over browser:
+browser starts rendering the page.
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: CSS code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server->browser: JS code
+note over browser:
+Start executing JS code.
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+note over server:
+Sending data of all the stored notes.
+end note
+server->browser: json file containing the posted notes.
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+server->browser: text/html
