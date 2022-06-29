@@ -1,0 +1,13 @@
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server->browser: HTML Code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: CSS Code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server->browser: JS Code
+note over browser:
+ Start executing JS code that retrieves notes from the server.
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->browser: JSON deactivate
+browser->server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+server->browser: HTML Code
