@@ -1,5 +1,0 @@
-browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa   {  "content": "holis",  "date": "2022-06-29T08:49:05.574Z"}
-server->browser: Response with json {"message":"note created"}
-note over browser:
-Doesn't redirect to another page.
-end note
